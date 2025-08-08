@@ -27,7 +27,7 @@ def retrive_indices(embed_query, embedding, top_k=3):
     scores = cosine_similarity([embed_query], embedding)[0]
     indices = np.argsort(scores)[::-1]
 
-    return indices[0:top_k]
+    return indices[:top_k]
 
 
 
